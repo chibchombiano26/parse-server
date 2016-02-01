@@ -27,6 +27,8 @@ app.get('/', function(req, res) {
 });
 
 var port = process.env.PORT || 1337;
-app.listen(process.env.PORT, process.env.IP, function() {
-  console.log('parse-server-example running on port ' + port + '.');
+var ip = process.env.PORT || "127.0.0.1";
+
+app.listen(port, ip, function() {
+  console.log('parse-server-example running on port ' + ip + ' ' + port + '.');
 });
